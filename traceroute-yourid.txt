@@ -1,0 +1,6 @@
+Traceroute works by sending smalll packets to the destination with a special value called "TTL", Time-to-Live.
+The TTL value is set to 1.
+his TTL value acts like a countdown timer for the packet's journey. The first router it encounters decrements this TTL to 0 and then sends the packet back to the sender, saying "Hey, I couldn't deliver this packet because its TTL expired!"
+Traceroute notes down the IP address of this router. Then, it sends another packet with TTL set to 2, and the process repeats.
+Each time, the TTL increases by 1 until it reaches its destination.
+By recording the IP addresses of each router and the time it took for the packet to travel back and forth, Traceroute figures out the path to the destination and how long it takes to reach each router along the way. This helps in understanding the network's structure and finding any issues like delays or bottlenecks.
